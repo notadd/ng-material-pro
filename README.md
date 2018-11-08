@@ -38,9 +38,7 @@ angular  material2 扩展组件
 - [ ] 悬停 （components/hover）
 - [ ] 图片 （https://vuetifyjs.com/zh-Hans/components/images）
 - [ ] 自动完成 【更多样式】（components/autocompletes）
-- [ ] 组合框 
-
-
+- [ ] 组合框 （components/combobox）
 - [ ] 上传 【文件上传，图片上传，头像上传】
 - [ ] 滑杆 【关闭，文字，图标，数值，自定义范围滑块，预定值滑块，离散滑块，范围滑块，最小最大滑块，节拍器】（components/sliders）
 - [ ] 文本框 (components/text-fields)
