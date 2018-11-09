@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "@notadd/ng-material2": {
+      "root": "projects/notadd/ng-material2",
+      "sourceRoot": "projects/notadd/ng-material2/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/notadd/ng-material2/tsconfig.lib.json",
+            "project": "projects/notadd/ng-material2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/notadd/ng-material2/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/notadd/ng-material2/src/test.ts",
+            "tsConfig": "projects/notadd/ng-material2/tsconfig.spec.json",
+            "karmaConfig": "projects/notadd/ng-material2/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/notadd/ng-material2/tsconfig.lib.json",
+              "projects/notadd/ng-material2/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-material2"
