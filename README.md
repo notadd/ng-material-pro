@@ -4,7 +4,7 @@ angular  material2 扩展组件
 
 ### Roadmap
 
-- [ ] Icons
+- [x] Icons+
 
 **布局**
 
