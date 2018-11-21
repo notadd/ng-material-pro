@@ -9,8 +9,7 @@ It will be like : https://vuetifyjs.com/zh-Hans/components/alerts
 
 ## Contribution Description
 
-We welcome material2 users to participate in the development of this plugin, and as a contributor, please follow the following guidelines: -Code submission specification, refer to [Git Commit Message Conventions] (https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_
-ooaqwjidu5y/edit#)
+We welcome material2 users to participate in the development of this plugin, and as a contributor, please follow the following guidelines: -Code submission specification, refer to [Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
 -Always from develop checkout a new branch, the naming specification for feature/xxx,xxx must be readable, such as: Icons => feature/icons
 -Pull the latest code for the remote develop branch in the local develop branch before the new branch of checkout
 
