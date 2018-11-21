@@ -1,6 +1,9 @@
 # NgMaterial2
 
-Angular material2 Extension Components
+Angular material2 Extension Components ..
+
+
+It will be like : https://vuetifyjs.com/zh-Hans/components/alerts
 
 **[中文说明](README_zh.md)**
 
@@ -36,7 +39,7 @@ After you have submitted the bug question, we are happy to accept that you submi
 **ui Component**
 - [ ] Prompt box (components/alerts)
 - [ ] Avatar (Components/avatars)
-- [ ] Bottom navigation (https://vuetifyjs.com/zh-Hans/components/breadcrumbs)
+- [ ] Bottom navigation (components/breadcrumbs)
 - [ ] button "More Styles" (components/buttons)
 - [ ] Button: Suspension response button (components/floating-action-buttons)
 - [ ] Cards "more Styles" (components/cards)
@@ -53,7 +56,7 @@ Button:
 - [ ] button group (components/button-groups)
 - [ ] Item group (item-groups)
 - [ ] multi-Window (components/windows)- [ ] hover (components/hover)
-- [ ] Picture (https://vuetifyjs.com/zh-Hans/components/images) ✔
+- [ ] Picture (components/images) ✔
 - [ ] autocomplete "More Styles" (components/autocompletes)
 - [ ] combo box (Components/combobox)
 - [ ] upload "file upload, image upload, avatar upload"
