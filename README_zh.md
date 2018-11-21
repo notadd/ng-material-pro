@@ -7,7 +7,7 @@ angular  material2 扩展组件
 
 ## 贡献说明
 
-我们欢迎 Nest.js 使用者来参与这个插件的开发，作为一个贡献者，请您遵循以下原则：
+我们欢迎 material2 使用者来参与这个插件的开发，作为一个贡献者，请您遵循以下原则：
 
 - 代码提交规范，参考 [Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
 - 始终从 develop checkout 一个新分支，命名规范为 feature/xxx，xxx 必须具有可读性，如：Icons => feature/icons
