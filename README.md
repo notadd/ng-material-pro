@@ -2,7 +2,7 @@
 
 Angular material2 Extension Components
 
-**[中文说明](README_zh.md) **
+**[中文说明](README_zh.md)**
 
 ## Contribution Description
 
@@ -15,11 +15,11 @@ ooaqwjidu5y/edit#)
 
 ## function Development Check Roadmap first to make sure that the features you want to contribute are not being implemented.
 
-Then submit a contribution request in **issue** indicating the features you want to contribute.
+Then submit a contribution request in**issue**indicating the features you want to contribute.
 
-## Find Bugs? If you find a bug in the source code, please submit a bug question in the **issue** of this warehouse first.
+## Find Bugs? If you find a bug in the source code, please submit a bug question in the**issue**of this warehouse first.
 
-After you have submitted the bug question, we are happy to accept that you submit a **pr** to help us fix the bug.
+After you have submitted the bug question, we are happy to accept that you submit a**pr**to help us fix the bug.
 
 ## QQ Communication Group
 
@@ -29,11 +29,11 @@ After you have submitted the bug question, we are happy to accept that you submi
 
 - [ ] Icons+✔
 
-** Layout **
+**Layout**
 
-- [ ] Preset layout ** ANIMATION **
+- [ ] Preset layout**ANIMATION**
 
-**ui Component **
+**ui Component**
 - [ ] Prompt box (components/alerts)
 - [ ] Avatar (Components/avatars)
 - [ ] Bottom navigation (https://vuetifyjs.com/zh-Hans/components/breadcrumbs)# NgMaterial2
@@ -53,11 +53,11 @@ ooaqwjidu5y/edit#)
 
 ## function Development Check Roadmap first to make sure that the features you want to contribute are not being implemented.
 
-Then submit a contribution request in **issue** indicating the features you want to contribute.
+Then submit a contribution request in**issue**indicating the features you want to contribute.
 
-## Find Bugs? If you find a bug in the source code, please submit a bug question in the **issue** of this warehouse first.
+## Find Bugs? If you find a bug in the source code, please submit a bug question in the**issue**of this warehouse first.
 
-After you have submitted the bug question, we are happy to accept that you submit a **pr** to help us fix the bug.
+After you have submitted the bug question, we are happy to accept that you submit a**pr**to help us fix the bug.
 
 ## QQ Communication Group
 
@@ -67,14 +67,14 @@ After you have submitted the bug question, we are happy to accept that you submi
 
 - [ ] Icons+✔
 
-** Layout **
+**Layout**
 
-- [ ] Preset layout ** ANIMATION **
+- [ ] Preset layout**ANIMATION**
 # NgMaterial2
 
 Angular material2 Extension Components
 
-**[中文说明](README_zh.md) **
+**[中文说明](README_zh.md)**
 
 ## Contribution Description
 
@@ -87,11 +87,11 @@ ooaqwjidu5y/edit#)
 
 ## function Development Check Roadmap first to make sure that the features you want to contribute are not being implemented.
 
-Then submit a contribution request in **issue** indicating the features you want to contribute.
+Then submit a contribution request in**issue**indicating the features you want to contribute.
 
-## Find Bugs? If you find a bug in the source code, please submit a bug question in the **issue** of this warehouse first.
+## Find Bugs? If you find a bug in the source code, please submit a bug question in the**issue**of this warehouse first.
 
-After you have submitted the bug question, we are happy to accept that you submit a **pr** to help us fix the bug.
+After you have submitted the bug question, we are happy to accept that you submit a**pr**to help us fix the bug.
 
 ## QQ Communication Group
 
@@ -101,11 +101,11 @@ After you have submitted the bug question, we are happy to accept that you submi
 
 - [ ] Icons+✔
 
-** Layout **
+**Layout**
 
-- [ ] Preset layout ** ANIMATION **
+- [ ] Preset layout**ANIMATION**
 
-**ui Component **
+**ui Component**
 - [ ] Prompt box (components/alerts)
 - [ ] Avatar (Components/avatars)
 - [ ] Bottom navigation (https://vuetifyjs.com/zh-Hans/components/breadcrumbs)
@@ -144,5 +144,6 @@ Button:
 - [ ] tabs to the Right tab, Content tab, Search tab, Icon Text tab, Desktop tab, Alignment tab with toolbar title, Long tab, Catalog tab, Paging tab, Custom Icon tab (Components/tabs) (A.)
 - [ ] Timeline (components/timelines)
 - [ ] Toolbar "More Styles" (Components/toolbars)
-- [ ] tree view (Components/treeview) - [ ] Drag and drop tree view ✔
+- [ ] tree view (Components/treeview)    
+- [ ] Drag and drop tree view ✔
 
