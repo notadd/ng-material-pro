@@ -41,7 +41,7 @@ angular  material2 扩展组件
 
 - [ ] 提示框 (components/alerts) ✔
 - [ ] 头像（components/avatars）
-- [ ] 底部导航 (https://vuetifyjs.com/zh-Hans/components/breadcrumbs)✔
+- [ ] 底部导航 (components/breadcrumbs)✔
 - [ ] 按钮 【更多样式】（components/buttons）✔
 - [ ] 按钮：悬浮响应按钮（components/floating-action-buttons）✔
 - [ ] 卡片  【更多样式】（components/cards）
@@ -60,7 +60,7 @@ angular  material2 扩展组件
 - [ ] 多窗口 （components/windows）    
 
 - [ ] 悬停 （components/hover）
-- [ ] 图片 （https://vuetifyjs.com/zh-Hans/components/images）✔
+- [ ] 图片 （components/images）✔
 - [ ] 自动完成 【更多样式】（components/autocompletes）✔
 - [ ] 组合框 （components/combobox）
 - [ ] 上传 【文件上传，图片上传，头像上传】✔
