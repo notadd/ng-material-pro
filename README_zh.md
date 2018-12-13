@@ -51,7 +51,6 @@ angular  material2 扩展组件
 - [ ] 上传 【文件上传，图片上传，头像上传】✔
 - [ ] 视差 （components/parallax）
 - [ ] 评级 （components/ratings）
-- [ ] 副标题 （components/subheaders）
 - [ ] 时间线 （components/timelines）
 - [ ] 树视图 （components/treeview）✔
 - [ ] 可拖拽树视图✔
