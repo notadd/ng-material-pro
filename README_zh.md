@@ -40,7 +40,7 @@ angular  material2 扩展组件
 **UI组件**
 
 - [ ] 提示框 (components/alerts) ✔
-- [ ] 轮播 （components/carousels）
+- [ ] 轮播 （components/carousels）✔
 - [ ] 页脚 （components/footer）✔
 
 按钮：
@@ -52,5 +52,4 @@ angular  material2 扩展组件
 - [ ] 视差 （components/parallax）
 - [ ] 评级 （components/ratings）
 - [ ] 时间线 （components/timelines）
-- [ ] 树视图 （components/treeview）✔
 - [ ] 可拖拽树视图✔
