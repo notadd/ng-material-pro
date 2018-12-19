@@ -46,10 +46,11 @@ angular  material2 扩展组件
 按钮：
 
 - [ ] 物品群 （item-groups）
+- [ ] 多级联动 ✔
 - [ ] 多窗口 （components/windows）    
 - [ ] 悬停 （components/hover）
 - [ ] 上传 【文件上传，图片上传，头像上传】✔
 - [ ] 视差 （components/parallax）
 - [ ] 评级 （components/ratings）
 - [ ] 时间线 （components/timelines）
-- [ ] 可拖拽树视图✔
+- [ ] 可拖拽树视图 【滞后】
