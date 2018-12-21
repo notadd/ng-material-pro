@@ -1,59 +1,79 @@
 # NgMaterial2
 
-angular  material2 扩展组件
+Angular material2 Extension Components ..
+
+
+It will be like : https://vuetifyjs.com/zh-Hans/components/alerts
+
+**[中文说明](README_zh.md)**
+
+## Contribution Description
+
+We welcome material2 users to participate in the development of this plugin, and as a contributor, please follow the following guidelines: -Code submission specification, refer to [Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
+-Always from develop checkout a new branch, the naming specification for feature/xxx,xxx must be readable, such as: Icons => feature/icons
+-Pull the latest code for the remote develop branch in the local develop branch before the new branch of checkout
+
+-Refer to the project's current naming rules for file naming rules.
+
+## function Development Check Roadmap first to make sure that the features you want to contribute are not being implemented.
+
+Then submit a contribution request in**issue**indicating the features you want to contribute.
+
+## Find Bugs? If you find a bug in the source code, please submit a bug question in the**issue**of this warehouse first.
+
+After you have submitted the bug question, we are happy to accept that you submit a**pr**to help us fix the bug.
+
+## QQ Communication Group
+
+321735506, please specify the purpose of the group!
 
 ### Roadmap
 
-- [ ] Icons+ ✔
+- [ ] Icons+✔
 
-**布局**
+**Layout**
 
-- [ ] 预设布局 
+- [ ] Preset layout**ANIMATION**
 
-**动画**
+**ui Component**
+- [ ] Prompt box (components/alerts)
+- [ ] Avatar (Components/avatars)
+- [ ] Bottom navigation (components/breadcrumbs)
+- [ ] button "More Styles" (components/buttons)
+- [ ] Button: Suspension response button (components/floating-action-buttons)
+- [ ] Cards "more Styles" (components/cards)
+- [ ] Rotation (components/carousels)
+- [ ] thick cut fries (components/chips)
+- [ ] Data iterator (components/data-iterator)
+- [ ] Data table (components/data-tables)
+- [ ] dialog box "Full Screen dialog box, Form dialog box, scroll dialog box, progress Device" (Components/dialogs)
+- [ ] splitter "More Styles" (components/dividers)
+- [ ] Expand panel (components/expansion-panels)
 
+- [ ] Footer (Components/footer)
+Button:
+- [ ] button group (components/button-groups)
+- [ ] Item group (item-groups)
+- [ ] multi-Window (components/windows)- [ ] hover (components/hover)
+- [ ] Picture (components/images) ✔
+- [ ] autocomplete "More Styles" (components/autocompletes)
+- [ ] combo box (Components/combobox)
+- [ ] upload "file upload, image upload, avatar upload"
+- [ ] sliding rod "off, text, icons, numeric values, custom range slider, predetermined value slider, discrete slider, range slider, minimum maximum slider, metronome" (components/sliders)
+- [ ] text box (components/text-fields)
+- [ ] List (components/lists)
+- [ ] Menu "More Styles" (Components/menus)
+- [ ] Navigation drawer (components/navigation-drawers)
+- [ ] Paging "More Styles" (components/paginations)
+- [ ] Parallax (Components/parallax)
+- [ ] progress bar "more Styles" (components/progress)
+- [ ] Rating (components/ratings)
+- [ ] Snack bar (components/snackbars)
+- [ ] Stepper "nonlinear step, multi-line error status display, dynamic steps" (components/steppers)
+- [ ] Subtitle (components/subheaders)
+- [ ] tabs to the Right tab, Content tab, Search tab, Icon Text tab, Desktop tab, Alignment tab with toolbar title, Long tab, Catalog tab, Paging tab, Custom Icon tab (Components/tabs) (A.)
+- [ ] Timeline (components/timelines)
+- [ ] Toolbar "More Styles" (Components/toolbars)
+- [ ] tree view (Components/treeview)    
+- [ ] Drag and drop tree view ✔
 
-**UI组件**
-
-- [ ] 提示框 (components/alerts) ✔
-- [ ] 头像（components/avatars）
-- [ ] 底部导航 (https://vuetifyjs.com/zh-Hans/components/breadcrumbs)✔
-- [ ] 按钮 【更多样式】（components/buttons）✔
-- [ ] 按钮：悬浮响应按钮（components/floating-action-buttons）✔
-- [ ] 卡片  【更多样式】（components/cards）
-- [ ] 轮播 （components/carousels）
-- [ ] 厚切薯条 (components/chips)
-- [ ] 数据迭代器 （components/data-iterator）
-- [ ] 数据表格 （components/data-tables）✔
-- [ ] 对话框 【全屏对话框，表单对话框，滚动对话框，进度器】（components/dialogs）
-- [ ] 分割器 【更多样式】 （components/dividers）
-- [ ] 拓展面板 （components/expansion-panels）
-- [ ] 页脚 （components/footer）✔
-
-按钮：
-- [ ] 按钮群 （components/button-groups）✔
-- [ ] 物品群 （item-groups）
-- [ ] 多窗口 （components/windows）    
-
-- [ ] 悬停 （components/hover）
-- [ ] 图片 （https://vuetifyjs.com/zh-Hans/components/images）✔
-- [ ] 自动完成 【更多样式】（components/autocompletes）✔
-- [ ] 组合框 （components/combobox）
-- [ ] 上传 【文件上传，图片上传，头像上传】✔
-- [ ] 滑杆 【关闭，文字，图标，数值，自定义范围滑块，预定值滑块，离散滑块，范围滑块，最小最大滑块，节拍器】（components/sliders）
-- [ ] 文本框 (components/text-fields)
-- [ ] 列表 （components/lists）
-- [ ] 菜单 【更多样式】（components/menus）✔
-- [ ] 导航抽屉 （components/navigation-drawers）✔
-- [ ] 分页器 【更多样式】（components/paginations）✔
-- [ ] 视差 （components/parallax）
-- [ ] 进度条 【更多样式】（components/progress）✔
-- [ ] 评级 （components/ratings）
-- [ ] 小吃吧 （components/snackbars）
-- [ ] 步进器 【非线性步骤，多行错误状态显示，动态步骤】（components/steppers）
-- [ ] 副标题 （components/subheaders）
-- [ ] 选项卡 【右侧选项卡，内容选项卡，搜索选项卡，图标文本选项卡，桌面选项卡，与工具栏标题对齐选项卡，长选项卡，目录选项卡，分页选项卡，自定义图标选项卡】 （components/tabs）
-- [ ] 时间线 （components/timelines）
-- [ ] 工具栏 【更多样式】 （components/toolbars）
-- [ ] 树视图 （components/treeview）✔
-- [ ] 可拖拽树视图✔
