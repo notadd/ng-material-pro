@@ -35,3 +35,11 @@
         </nm-slide>
     </nm-carousel>
 </div>
+
+<div class="box">
+    <nm-cascade-dropdownlist 
+        [model]="['zhinan', 'shejiyuanze', 'fankui']"
+        [options]="options"
+        (modelChange)="changeHandle($event)">
+    </nm-cascade-dropdownlist>
+</div>
