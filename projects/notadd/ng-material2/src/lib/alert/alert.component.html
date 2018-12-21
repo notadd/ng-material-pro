@@ -1,0 +1,9 @@
+<div class="nm-alert" fxLayout="row nowrap" fxLayoutAlign="space-between center" [ngClass]="status" *ngIf="isVisible" [@animate]="'show'">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="20px" fxFlex="90%">
+        <mat-icon *ngIf="hasIcon">{{icons[status]}}</mat-icon>
+        <span><ng-content></ng-content></span>
+    </div>
+    <button mat-icon-button *ngIf="dismissible" (click)="hide()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>

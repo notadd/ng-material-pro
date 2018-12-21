@@ -19,4 +19,19 @@
         <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
     </li>
 </ul>
+<button #button (click)="alert.show()">显示 alert</button>
+<nm-alert #alert>this is success alert.</nm-alert>
 
+<div class="carousel">
+    <nm-carousel>
+        <nm-slide>
+            <img src="https://i.pinimg.com/564x/e7/35/4c/e7354cea13a75a31c32d62b8e9ecc642.jpg">
+        </nm-slide>
+        <nm-slide>
+            <img src="https://i.pinimg.com/564x/84/04/33/84043324489d7ec8f28222da17309dc9.jpg">
+        </nm-slide>
+        <nm-slide>
+            <img src="https://i.pinimg.com/564x/0f/c1/e9/0fc1e93b74d5d2423ee6f009f6457f92.jpg">
+        </nm-slide>
+    </nm-carousel>
+</div>

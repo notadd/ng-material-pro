@@ -1,0 +1,25 @@
+// transition
+@mixin transition($transition...) {
+    @if length($transition) == 0 {
+        transition: $transition-base;
+    } @else {
+        transition: $transition;
+    }
+}
+
+// hover & focus styles
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin mat-icon-size($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+    min-width: $size;
+    min-height: $size;
+    line-height: $size;
+}

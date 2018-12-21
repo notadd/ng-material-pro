@@ -1,0 +1,78 @@
+.nm-carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-flow: column nowrap;
+    transform-style: preserve-3d;
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: inherit;
+        overflow: hidden;
+        outline-style: none;
+    }
+
+    %nm-carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .mat-icon {
+            color: #FFF;
+        }
+    }
+
+    &-control-prev {
+        @extend %nm-carousel-control;
+        left: 35px;
+    }
+
+    &-control-next {
+        @extend %nm-carousel-control;
+        right: 35px;
+    }
+
+    &-indicators {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        margin-right: 30px;
+        margin-left: 30px;
+        list-style: none;
+
+        li {
+            position: relative;
+            flex: 0 1 auto;
+            width: 30px;
+            height: 6px;
+            margin-right: 3px;
+            margin-left: 3px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: rgba(#FFF, .5);
+
+            &::before,
+            &::after {
+                position: absolute;
+                top: -10px;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                height: 10px;
+                content: "";
+            }
+        }
+
+        .active {
+            background-color: #FFF;
+        }
+    }
+}

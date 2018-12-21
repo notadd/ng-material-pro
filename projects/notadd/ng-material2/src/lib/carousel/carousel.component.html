@@ -1,0 +1,12 @@
+<div class="nm-carousel">
+    <ol class="nm-carousel-indicators" *ngIf="isControls">
+        <li *ngFor="let slide of slides;" [class.active]="slide.active === true" (click)="select(slide)"></li>
+    </ol>
+    <div class="nm-carousel-inner"><ng-content></ng-content></div>
+    <button *ngIf="isControls" class="nm-carousel-control-prev" mat-icon-button (click)="previousSlide()">
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button *ngIf="isControls" class="nm-carousel-control-next" mat-icon-button (click)="nextSlide()">
+        <mat-icon>chevron_right</mat-icon>
+    </button>
+</div>
