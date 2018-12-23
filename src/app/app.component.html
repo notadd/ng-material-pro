@@ -1,45 +1,282 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <h1>
-        Welcome to {{ title }}!
-    </h1>
-    <img width="300" alt="Angular Logo"
-         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
-        </h2>
-    </li>
-    <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-</ul>
-<button #button (click)="alert.show()">显示 alert</button>
-<nm-alert #alert>this is success alert.</nm-alert>
+<div class="page">
+    <div class="page-header">
+        <div class="container">
+            <h1><a href="https://github.com/wish-cheng/ng-material2" target="_blank" title="ng-material2">NgMaterial2</a></h1>
+            <p>Angular material2 Extension Components .. </p>
+        </div>
+    </div>
+    <div class="container" fxLayout="row nowrap" fxLayoutAlign="space-between start" fxLayoutGap="30px">
+        <div class="page-sidebar" fxFlex="25">
+            <mat-nav-list>
+                <mat-list-item>
+                    <a matLine href="#alert">Alert</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a matLine href="#carousel">Carousel</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a matLine href="#cascade-dropdownlist">Cascade Dropdown List</a>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+        <div class="page-content" fxFlex="75">
+            <!-- alerts start -->
+            <div class="section">
+                <h1 class="title" id="alert">
+                    Alert
+                    <a class="link" href="#alert">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h1>
+                <p>
+                    使用警报消息为典型的用户操作提供反馈消息。
+                </p>
+                <h2 class="subtitle" id="alert-example">
+                    Example
+                    <a class="link" href="#alert-example">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>包含任何文本和可选的关闭按钮、自定义图标以及四个消息类型。</p>
+                <div class="example">
+                    <nm-alert #infoAlert status="info" isVisible="true">this is info alert.</nm-alert>
+                    <nm-alert #successAlert status="success" isVisible="true">this is success alert.</nm-alert>
+                    <nm-alert #errorAlert status="error" isVisible="true">this is error alert.</nm-alert>
+                    <nm-alert #warningAlert status="warning" isVisible="true">this is warning alert.</nm-alert>
+                </div>
+                
+                <h2 class="subtitle" id="alert-usage">
+                    Usage
+                    <a class="link" href="#alert-usage">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>使用<code class="highlight">&lt;nm-alert #alert&gt; &lt;/nm-alert&gt;</code>创建一个alert。</p>
+                <div class="example">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>status</code></td>
+                                <td><code>info</code></td>
+                                <td>四种状态类型，可选success、info、warning、error，默认为info</td>
+                            </tr>
+                            <tr>
+                                <td><code>dismissible</code></td>
+                                <td><code>true</code></td>
+                                <td>是否可以关闭，默认有关闭警报消息按钮</td>
+                            </tr>
+                            <tr>
+                                <td><code>hasIcon</code></td>
+                                <td><code>true</code></td>
+                                <td>是否显示图标，默认为显示</td>
+                            </tr>
+                            <tr>
+                                <td><code>isVisible</code></td>
+                                <td><code>false</code></td>
+                                <td>是否直接显示，默认为不显示</td>
+                            </tr>
+                            <tr>
+                                <td><code>icons</code></td>
+                                <td>---</td>
+                                <td>自定义图标，如 <code>success: 'check_circle'</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+                <h2 class="subtitle" id="alert-methods">
+                    Methods
+                    <a class="link" href="#alert-methods">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>警报消息有三种可用方法，分别是<code class="highlight">alert.show()</code>、<code class="highlight">alert.hide()</code>和<code class="highlight">alert.toogle()</code>。</p>
+                <div class="example">
+                    <button mat-raised-button (click)="alert.show()">显示 alert</button>
+                    <button mat-raised-button (click)="alert.hide()">隐藏 alert</button>
+                    <button mat-raised-button (click)="alert.toggle()">toggle alert</button>
+                    <br><br>
+                    <nm-alert #alert isVisible="true">this is info alert.</nm-alert>
+                </div>
+            </div>
+            <!-- alerts end -->
+            
+            <!-- carousel start -->
+            <div class="section">
+                <h1 class="title" id="carousel">
+                    Carousel
+                    <a class="link" href="#carousel">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h1>
+                <p>
+                    轮播图。
+                </p>
+                <h2 class="subtitle" id="carousel-example">
+                    Example
+                    <a class="link" href="#carousel-example">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>可选择自动循环滚动、手动控制的轮播图。</p>
+                <div class="example">
+                    <div class="carousel">
+                        <nm-carousel>
+                            <nm-slide>
+                                <img src="https://i.pinimg.com/564x/e7/35/4c/e7354cea13a75a31c32d62b8e9ecc642.jpg">
+                            </nm-slide>
+                            <nm-slide>
+                                <img src="https://i.pinimg.com/564x/84/04/33/84043324489d7ec8f28222da17309dc9.jpg">
+                            </nm-slide>
+                            <nm-slide>
+                                <img src="https://i.pinimg.com/564x/0f/c1/e9/0fc1e93b74d5d2423ee6f009f6457f92.jpg">
+                            </nm-slide>
+                        </nm-carousel>
+                    </div>
+                </div>
+                <h2 class="subtitle" id="carousel-usage">
+                    Usage
+                    <a class="link" href="#carousel-usage">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>使用<code class="highlight">&lt;nm-carousel&gt; ...&lt;nm-slide&gt; &lt;img src=".."&gt; &lt;/nm-slide&gt;... &lt;/nm-carousel&gt;</code>即可创建一个轮播图。</p>
+                <div class="example">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>isLoop</code></td>
+                                <td><code>true</code></td>
+                                <td>是否循环滚动，默认为自动滚动，滚动时间间隔默认为5000ms</td>
+                            </tr>
+                            <tr>
+                                <td><code>isControls</code></td>
+                                <td><code>true</code></td>
+                                <td>是否显示控制按钮，默认显示</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- carousel end -->
 
-<div class="carousel">
-    <nm-carousel>
-        <nm-slide>
-            <img src="https://i.pinimg.com/564x/e7/35/4c/e7354cea13a75a31c32d62b8e9ecc642.jpg">
-        </nm-slide>
-        <nm-slide>
-            <img src="https://i.pinimg.com/564x/84/04/33/84043324489d7ec8f28222da17309dc9.jpg">
-        </nm-slide>
-        <nm-slide>
-            <img src="https://i.pinimg.com/564x/0f/c1/e9/0fc1e93b74d5d2423ee6f009f6457f92.jpg">
-        </nm-slide>
-    </nm-carousel>
+            <!-- carousel dropdownlist start -->
+            <div class="section">
+                <h1 class="title" id="carousel-dropdownlist">
+                    Carousel Dropdownlist
+                    <a class="link" href="#carousel-dropdownlist">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h1>
+                <p>
+                    多级联动 下拉选择
+                </p>
+                <h2 class="subtitle" id="carousel-dropdownlist-example">
+                    Example
+                    <a class="link" href="#carousel-dropdownlist-example">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>可配置选择项、双向绑定数据、获取选择结果的多级联动组件。</p>
+                <div class="example">
+                    <nm-cascade-dropdownlist [options]="options">
+                    </nm-cascade-dropdownlist>
+                    <br>
+                    <nm-cascade-dropdownlist 
+                        [model]="['zhinan', 'shejiyuanze', 'fankui']"
+                        [options]="options">
+                    </nm-cascade-dropdownlist>
+                </div>
+                <h2 class="subtitle" id="carousel-dropdownlist-usage">
+                    Usage
+                    <a class="link" href="#carousel-dropdownlist-usage">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>使用<code class="highlight">&lt;nm-cascade-dropdownlist [options]="options"&gt;&lt;/nm-cascade-dropdownlist&gt;</code>即可创建一个能够多级联动的选框。</p>
+                <div class="example">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Default</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>options</code></td>
+                                <td></td>
+                                <td>数据源，类型：Array</td>
+                            </tr>
+                            <tr>
+                                <td><code>placeholder</code></td>
+                                <td><code>请选择</code></td>
+                                <td>输入框占位文本，类型：string，默认 `请选择`</td>
+                            </tr>
+                            <tr>
+                                <td><code>disabled</code></td>
+                                <td><code>false</code></td>
+                                <td>是否禁用选择，类型：boolean，默认 `false`</td>
+                            </tr>
+                            <tr>
+                                <td><code>clearable</code></td>
+                                <td><code>false</code></td>
+                                <td>是否支持清空选项，类型：boolean，默认 `false`</td>
+                            </tr>
+                            <tr>
+                                <td><code>fullLevels</code></td>
+                                <td><code>true</code></td>
+                                <td>是否显示完整的选中值，类型：boolean，默认`true`</td>
+                            </tr>
+                            <tr>
+                                <td><code>changeOnSelect</code></td>
+                                <td><code>false</code></td>
+                                <td>选择任意一级的选项立即得到反馈，boolean 默认 `false`</td>
+                            </tr>
+                            <tr>
+                                <td><code>model</code></td>
+                                <td></td>
+                                <td>默认绑定值，数组，每一项是数据中每一层的 value</td>
+                            </tr>
+                            <tr>
+                                <td><code>modelChange</code></td>
+                                <td></td>
+                                <td>返回当前选中的value数组</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 class="subtitle" id="carousel-dropdownlist-method">
+                    Methods
+                    <a class="link" href="#carousel-dropdownlist-method">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>多级联动组件提供的<code class="highlight">modelChange()</code>方法，可在选择项改变时返回当前选择的各级value值。请在console中查看。</p>
+                <div class="example">
+                    <nm-cascade-dropdownlist
+                        [options]="options"
+                        (modelChange)="changeHandle($event)">
+                    </nm-cascade-dropdownlist>
+                </div>
+            </div>
+            <!-- carousel dropdownlist end -->
+        </div>
+    </div>
 </div>
 
-<div class="box">
-    <nm-cascade-dropdownlist 
-        [model]="['zhinan', 'shejiyuanze', 'fankui']"
-        [options]="options"
-        (modelChange)="changeHandle($event)">
-    </nm-cascade-dropdownlist>
-</div>
