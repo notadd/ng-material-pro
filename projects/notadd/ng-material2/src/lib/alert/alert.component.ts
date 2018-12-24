@@ -1,5 +1,6 @@
 import { Component, HostBinding, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { NmAlertIcons } from './icons.interface';
 
 let NEXT_ID = 0;
 
@@ -52,6 +53,16 @@ export class NmAlertComponent implements OnInit {
     public isVisible: boolean;
 
     /**
+     * Alert 可选图标
+     */
+    @Input()
+    public set icon(value: NmAlertIcons) {
+        this.icons = Object.assign(this.icons, {
+            [this.status]: value
+        });
+    }
+
+    /**
      * Alert 显示出来时触发的事件
      *
      * @memberOf NmAlertComponent
@@ -67,10 +78,7 @@ export class NmAlertComponent implements OnInit {
     @Output()
     public hidden = new EventEmitter<NmAlertComponent>();
 
-    /**
-     * Alert 可选图标
-     */
-    private icons: any;
+    public icons: NmAlertIcons;
 
     constructor() {
         this.status = 'info';
