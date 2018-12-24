@@ -1,7 +1,9 @@
-import { Component, forwardRef, OnDestroy, OnInit, Renderer2, EventEmitter, Input, Output } from '@angular/core';
+import { Component, forwardRef, OnDestroy, OnInit, Renderer2, EventEmitter, Input, Output, HostBinding } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { OptionsInterface } from '../options.interface';
+
+let NEXT_ID = 0;
 
 @Component({
     selector: 'nm-cascade-dropdownlist',
@@ -14,6 +16,11 @@ import { OptionsInterface } from '../options.interface';
     }],
 })
 export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAccessor {
+
+    /* 组件 id */
+    @HostBinding('attr.id')
+    @Input()
+    public id = `nm-cascade-list-${NEXT_ID++}`;
 
     @Input() disabled = false;
 
