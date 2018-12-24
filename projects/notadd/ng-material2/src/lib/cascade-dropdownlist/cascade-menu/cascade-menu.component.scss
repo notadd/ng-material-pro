@@ -10,7 +10,7 @@
 
 .nm-cascade-menu .popper__arrow {
     -webkit-transform: translateX(-400%);
-    transform: translateX(-400%)
+    transform: translateX(-400%);
 }
 
 .menu-list {
@@ -23,11 +23,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0 !important;
-    min-width: 160px
+    min-width: 160px;
 }
 
 .menu-list:last-child {
-    border-right: 0
+    border-right: 0;
 }
 
 .menu-item {
@@ -66,7 +66,7 @@
 
     &.selected {
         color: #fff;
-        background-color: #f5f7fa
+        background-color: #f5f7fa;
     }
 
     & .item-icon {
