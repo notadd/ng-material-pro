@@ -7,6 +7,25 @@ It will be like : https://vuetifyjs.com/zh-Hans/components/alerts
 
 **[中文说明](README_zh.md)**
 
+### Step 1: Install and configure Angular Material
+  [Getting Started Guide](https://material.angular.io/guide/getting-started) with Angular Material
+### Step 2: Install Notadd NgMaterial2
+```shell
+  ng add @notadd/ng-material2
+```
+
+### Step 3: Import the component modules
+```TypeScript
+  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material2';
+  
+  @NgModule({
+    ...
+    imports: [ NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule ],
+    ...
+  })
+  export class AppModule { }
+```
+
 ## Contribution Description
 
 We welcome material2 users to participate in the development of this plugin, and as a contributor, please follow the following guidelines: -Code submission specification, refer to [Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
