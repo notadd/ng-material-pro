@@ -5,104 +5,17 @@
     line-height: 40px;
 
     input {
-        cursor: pointer
+        cursor: pointer;
     }
 
     &.disabled .cascade-label {
         z-index: 2;
-        color: #b4bccc
+        color: #b4bccc;
     }
 
     .cascade-label {
         span {
-            color: #000
+            color: #000;
         }
     }
-}
-
-.el-cascader {
-    display: inline-block;
-    position: relative;
-    font-size: 14px;
-    line-height: 40px
-}
-
-.el-cascader .el-input,
-.el-cascader .el-input__inner {
-    cursor: pointer
-}
-
-.el-cascader .el-input__icon {
-    -webkit-transition: none;
-    transition: none
-}
-
-.el-cascader .el-icon-arrow-down {
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
-    font-size: 14px
-}
-
-.el-cascader .el-icon-arrow-down.is-reverse {
-    -webkit-transform: rotateZ(180deg);
-    transform: rotateZ(180deg)
-}
-
-.el-cascader .el-icon-circle-close {
-    z-index: 2;
-    -webkit-transition: color .2s cubic-bezier(.645, .045, .355, 1);
-    transition: color .2s cubic-bezier(.645, .045, .355, 1)
-}
-
-.el-cascader .el-icon-circle-close:hover {
-    color: #878d99
-}
-
-.el-cascader__clearIcon {
-    z-index: 2;
-    position: relative
-}
-
-.el-cascader__label {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    padding: 0 25px 0 15px;
-    color: #5a5e66;
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    cursor: pointer;
-    text-align: left;
-    font-size: inherit
-}
-
-.el-cascader__label span {
-    color: #000
-}
-
-.el-cascader--medium {
-    font-size: 14px;
-    line-height: 36px
-}
-
-.el-cascader--small {
-    font-size: 13px;
-    line-height: 32px
-}
-
-.el-cascader--mini {
-    font-size: 12px;
-    line-height: 28px
-}
-
-.el-cascader.is-disabled .el-cascader__label {
-    z-index: 2;
-    color: #b4bccc
 }
