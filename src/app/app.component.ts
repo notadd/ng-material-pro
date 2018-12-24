@@ -9,27 +9,27 @@ export class AppComponent {
     title = 'app';
 
     options: Array<any> = [{
-        value: 'zhinan',
+        value: 'guide',
         label: '指南',
         children: [{
-            value: 'shejiyuanze',
+            value: 'design-principles',
             label: '设计原则',
             children: [{
-                value: 'yizhi',
+                value: 'consistent',
                 label: '一致',
             }, {
-                value: 'fankui',
+                value: 'feedback',
                 label: '反馈',
             }, {
-                value: 'xiaolv',
+                value: 'efficiency',
                 label: '效率',
             }, {
-                value: 'kekong',
+                value: 'controllable',
                 label: '可控',
             }],
         }],
     }, {
-        value: 'zujian',
+        value: 'component',
         label: '组件',
         children: [{
             value: 'layout',

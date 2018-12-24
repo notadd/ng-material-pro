@@ -1,7 +1,7 @@
 <div class="page">
-    <div class="page-header">
+    <div class="page-header" fxLayout="row nowrap">
         <div class="container">
-            <h1><a href="https://github.com/wish-cheng/ng-material2" target="_blank" title="ng-material2">NgMaterial2</a></h1>
+            <h1><a href="https://github.com/notadd/ng-material2" target="_blank" title="ng-material2">NgMaterial2</a></h1>
             <p>Angular material2 Extension Components .. </p>
         </div>
     </div>
@@ -15,7 +15,7 @@
                     <a matLine href="#carousel">Carousel</a>
                 </mat-list-item>
                 <mat-list-item>
-                    <a matLine href="#cascade-dropdownlist">Cascade Dropdown List</a>
+                    <a matLine href="#cascade-dropdownlist">Cascade Dropdownlist</a>
                 </mat-list-item>
             </mat-nav-list>
         </div>
@@ -37,7 +37,7 @@
                         <mat-icon>link</mat-icon>
                     </a>
                 </h2>
-                <p>包含任何文本和可选的关闭按钮、自定义图标以及四个消息类型。</p>
+                <p>包含任何文本和可选的关闭按钮、自定义图标以及四种消息类型。</p>
                 <div class="example">
                     <nm-alert #infoAlert status="info" isVisible="true">this is info alert.</nm-alert>
                     <nm-alert #successAlert status="success" isVisible="true">this is success alert.</nm-alert>
@@ -125,7 +125,7 @@
                         <mat-icon>link</mat-icon>
                     </a>
                 </h2>
-                <p>可选择自动循环滚动、手动控制的轮播图。</p>
+                <p>可自动循环滚动、手动控制的轮播图。</p>
                 <div class="example">
                     <div class="carousel">
                         <nm-carousel>
@@ -161,16 +161,84 @@
                             <tr>
                                 <td><code>isLoop</code></td>
                                 <td><code>true</code></td>
-                                <td>是否循环滚动，默认为自动滚动，滚动时间间隔默认为5000ms</td>
+                                <td>是否循环滚动，类型 boolean，默认为自动滚动</td>
+                            </tr>
+                            <tr>
+                                <td><code>interval</code></td>
+                                <td><code>5000</code></td>
+                                <td>滚动时间间隔，类型 number，默认为5000ms</td>
                             </tr>
                             <tr>
                                 <td><code>isControls</code></td>
                                 <td><code>true</code></td>
-                                <td>是否显示控制按钮，默认显示</td>
+                                <td>是否显示控制按钮，类型 boolean，默认显示</td>
+                            </tr>
+                            <tr>
+                                <td><code>slideChanged</code></td>
+                                <td></td>
+                                <td>Slide 转换时触发的事件</td>
+                            </tr>
+                            <tr>
+                                <td><code>slideAdded</code></td>
+                                <td></td>
+                                <td>添加新的 Slide 触发的事件</td>
+                            </tr>
+                            <tr>
+                                <td><code>slideRemoved</code></td>
+                                <td></td>
+                                <td>移除 Slide 触发的事件</td>
+                            </tr>
+                            <tr>
+                                <td><code>carouselStopped</code></td>
+                                <td></td>
+                                <td>轮播停止转换触发的事件</td>
+                            </tr>
+                            <tr>
+                                <td><code>carouselPlaying</code></td>
+                                <td></td>
+                                <td>轮播开始转换触发的事件</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <h2 class="subtitle" id="carousel-methods">
+                    Methods
+                    <a class="link" href="#carousel-methods">
+                        <mat-icon>link</mat-icon>
+                    </a>
+                </h2>
+                <p>轮播图的方法有:</p>
+                <ol class="order-list">
+                    <li>
+                        添加新的 Slide
+                        <code class="highlight">addSlide(slide)</code>
+                    </li>
+                    <li>
+                        移除 Slide
+                        <code class="highlight">remove(slide)</code>
+                    </li>
+                    <li>
+                        切换上一个Slide
+                        <code class="highlight">previousSlide()</code>
+                    </li>
+                    <li>
+                        切换下一个Slide
+                        <code class="highlight">nextSlide()</code>
+                    </li>
+                    <li>
+                        获取指定 index 的Slide
+                        <code class="highlight">getSlide(index)</code>
+                    </li>
+                    <li>
+                        设置 slide 过渡阶段的方向
+                        <code class="highlight">select(slide, direction)</code>
+                    </li>
+                    <li>
+                        移动 Slide
+                        <code class="highlight">moveTo(slide, direction)</code>
+                    </li>
+                </ol>
+                
             </div>
             <!-- carousel end -->
 
@@ -191,13 +259,13 @@
                         <mat-icon>link</mat-icon>
                     </a>
                 </h2>
-                <p>可配置选择项、双向绑定数据、获取选择结果的多级联动组件。</p>
+                <p>可配置数据源、输入框占位文本、是否禁用、是否支持清空、默认绑定值，并且可以获取选择结果的多级联动组件。</p>
                 <div class="example">
                     <nm-cascade-dropdownlist [options]="options">
                     </nm-cascade-dropdownlist>
                     <br>
                     <nm-cascade-dropdownlist 
-                        [model]="['zhinan', 'shejiyuanze', 'fankui']"
+                        [model]="['guide', 'design-principles', 'feedback']"
                         [options]="options">
                     </nm-cascade-dropdownlist>
                 </div>
@@ -246,12 +314,12 @@
                             <tr>
                                 <td><code>changeOnSelect</code></td>
                                 <td><code>false</code></td>
-                                <td>选择任意一级的选项立即得到反馈，boolean 默认 `false`</td>
+                                <td>选择任意一级的选项立即得到反馈，类型 boolean 默认 `false`</td>
                             </tr>
                             <tr>
                                 <td><code>model</code></td>
                                 <td></td>
-                                <td>默认绑定值，数组，每一项是数据中每一层的 value</td>
+                                <td>默认绑定值，类型 Array，每一项是数据中每一层的 value</td>
                             </tr>
                             <tr>
                                 <td><code>modelChange</code></td>
@@ -267,13 +335,16 @@
                         <mat-icon>link</mat-icon>
                     </a>
                 </h2>
-                <p>多级联动组件提供的<code class="highlight">modelChange()</code>方法，可在选择项改变时返回当前选择的各级value值。请在console中查看。</p>
+                <p>1. 多级联动组件提供的<code class="highlight">modelChange()</code>方法，可在选择项改变时返回当前选择的各级value值。请在console中查看。</p>
                 <div class="example">
                     <nm-cascade-dropdownlist
                         [options]="options"
                         (modelChange)="changeHandle($event)">
                     </nm-cascade-dropdownlist>
                 </div>
+                <p>
+                    2. 使用<code class="highlight">close()</code>方法可主动关闭级联下拉选择。
+                </p>
             </div>
             <!-- cascade dropdownlist end -->
         </div>
