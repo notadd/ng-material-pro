@@ -4,3 +4,4 @@
 
 export * from './lib/alert';
 export * from './lib/carousel';
+export * from './lib/cascade-dropdownlist';

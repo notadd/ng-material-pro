@@ -1,6 +1,162 @@
+.container {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h1,h2,p {
+    margin: 0;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #1c1c1c;
+    background-color: rgb(235, 235, 235);
+    border-radius: 4px;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+
+    &.highlight {
+        color: #c7254e;
+        background-color: #f9f2f4;
+    }
+}
+
+pre {
+    margin: 0;
+}
+
+.example {
+    margin: 0 0 15px;
+    padding: 15px 25px;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.03);
+
+    thead th, tbody tr td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    thead th,tbody tr:not(:last-child) td {
+        border-bottom: 1px solid rgba(0,0,0,.03);
+    }
+    thead th,tbody tr td:not(:last-child) {
+        border-right: 1px solid rgba(0,0,0,.03);
+    }
+}
+
+.page {
+    background: #fff;
+
+    .page-header {
+        margin-bottom: 40px;
+        padding: 60px 0;
+        font-size: 24px;
+        text-align: left;
+        background: #3f51b5;
+        color: #8b9bf7;
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 60px;
+            font-weight: 500;
+            color: #fff;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        
+        p {
+            margin: 0;
+            font-weight: 300;
+        }
+    }
+
+    .page-sidebar {
+        a {
+            color: #464a4c;
+        }
+
+        .mat-list-item:hover a {
+            color: #3f51b5;
+        }
+    }
+
+    .page-content {
+        color: #666;
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .title {
+            margin-bottom: 10px;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 40px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+
+            +p {
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 16px;
+                color: #555;
+            }
+        }
+
+        .subtitle {
+            margin: 40px 0 8px;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            font-family: 'Roboto', sans-serif;
+            color: #444;
+
+            +p {
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 16px;
+            }
+        }
+
+        .link {
+            display: none;
+            vertical-align: bottom;
+            color: #6e6e6e;
+
+            &:hover {
+                color: #8b9bf7;
+            }
+        }
+
+        .title:hover, .subtitle:hover {
+            .link {
+                display: inline;
+            }
+        }
+
+        button {
+            margin-right: 10px;
+        }
+
+        .order-list {
+            line-height: 36px;
+        }
+    }
+}
+
+
 .carousel {
     width: 100%;
-    height: 1000px;
+    height: 400px;
 
     img {
         width: 100%;

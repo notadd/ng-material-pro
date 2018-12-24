@@ -1,0 +1,9 @@
+<div class="nm-cascade-menu" [@dropAnimation]="root.menuVisible" (click)="clickHandle($event)">
+    <mat-list class="menu-list" *ngFor="let menuItem of root.steps; let step = index">
+        <mat-list-item *ngFor="let listItem of menuItem; let i = index" class="menu-item" [class.active]="listItem.active"
+            [class.disabled]="listItem.disabled" (click)="root.selectHandle($event, step, i)">
+            <div matLine>{{listItem.label}}</div>
+            <mat-icon class="item-icon" *ngIf="listItem.children && listItem.children.length">chevron_right</mat-icon>
+        </mat-list-item>
+    </mat-list>
+</div>

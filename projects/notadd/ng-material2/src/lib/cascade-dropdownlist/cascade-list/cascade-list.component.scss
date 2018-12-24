@@ -1,0 +1,21 @@
+.nm-cascade-list {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    line-height: 40px;
+
+    input {
+        cursor: pointer;
+    }
+
+    &.disabled .cascade-label {
+        z-index: 2;
+        color: #b4bccc;
+    }
+
+    .cascade-label {
+        span {
+            color: #000;
+        }
+    }
+}
