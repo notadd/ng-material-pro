@@ -44,6 +44,7 @@
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.12.6",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.5.0",
     "copy-webpack-plugin": "^4.6.0",
     "jasmine-core": "~3.3.0",
