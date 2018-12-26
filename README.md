@@ -56,17 +56,19 @@ After you have submitted the bug question, we are happy to accept that you submi
 
 **ui Component **
 
--[ ] Prompt box (components/alerts)
--[ ] Rotation (components/carousels)
-
--[ ] Footer (Components/footer)
+- [ ] Prompt box (components/alerts)
+- [ ] Rotation (components/carousels)
+- [ ] Footer (Components/footer)
 
 Button:
--[ ] Item group (item-groups)
--[ ] multi-level linkage ✔
--[ ] multi-Window (components/windows)-[] hover (components/hover)
--[ ] upload "file upload, image upload, avatar upload"
--[ ] Parallax (Components/parallax)
--[ ] Rating (components/ratings)
--[ ] Timeline (components/timelines) -[] Drag and drop tree view "lag"
+
+- [ ] Item group (item-groups)
+- [ ] multi-level linkage ✔
+- [ ] multi-Window (components/windows)
+- [ ] hover (components/hover)
+- [ ] upload "file upload, image upload, avatar upload"
+- [ ] Parallax (Components/parallax)
+- [ ] Rating (components/ratings)
+- [ ] Timeline (components/timelines)
+- [ ] Drag and drop tree view "lag"
 
