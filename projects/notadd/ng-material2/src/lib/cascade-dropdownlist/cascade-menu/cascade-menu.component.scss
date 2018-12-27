@@ -34,7 +34,7 @@
     font-size: 16px;
     line-height: 3em;
     height: 3em;
-    padding: 0 20px;
+    padding: 0 !important;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
@@ -73,7 +73,7 @@
         color: #bfcbd9;
         position: absolute;
         top: 50%;
-        right: -10px;
+        right: 0;
         transform: translateY(-50%);
     }
 }
