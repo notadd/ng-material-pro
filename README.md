@@ -56,14 +56,14 @@ After you have submitted the bug question, we are happy to accept that you submi
 
 **ui Component **
 
-- [ ] Prompt box (components/alerts)
-- [ ] Rotation (components/carousels)
+- [x] Prompt box (components/alerts)
+- [x] Rotation (components/carousels)
 - [ ] Footer (Components/footer)
 
 Button:
 
 - [ ] Item group (item-groups)
-- [ ] multi-level linkage ✔
+- [x] multi-level linkage ✔
 - [ ] multi-Window (components/windows)
 - [ ] hover (components/hover)
 - [ ] upload "file upload, image upload, avatar upload"
