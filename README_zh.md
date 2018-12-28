@@ -39,14 +39,14 @@ angular  material2 扩展组件
 
 **UI组件**
 
-- [ ] 提示框 (components/alerts) ✔
-- [ ] 轮播 （components/carousels）✔
+- [x] 提示框 (components/alerts) ✔
+- [x] 轮播 （components/carousels）✔
 - [ ] 页脚 （components/footer）✔
 
 按钮：
 
 - [ ] 物品群 （item-groups）
-- [ ] 多级联动 ✔
+- [x] 多级联动 ✔
 - [ ] 多窗口 （components/windows）    
 - [ ] 悬停 （components/hover）
 - [ ] 上传 【文件上传，图片上传，头像上传】✔
