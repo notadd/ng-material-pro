@@ -6,7 +6,7 @@ angular  material2 扩展组件
 
 ### Step 1: 安装配置 material
 
-  [Getting Started Guide](https://material.angular.io/guide/getting-started) with Angular Material
+  [Getting Started Guide](https://material.angular.cn/guide/getting-started) with Angular Material
   
 ### Step 2: 安装 NgMaterial2
 
