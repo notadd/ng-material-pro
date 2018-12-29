@@ -4,6 +4,28 @@ angular  material2 扩展组件
 
 **[English](README.md)**
 
+### Step 1: 安装配置 material
+
+  [Getting Started Guide](https://material.angular.io/guide/getting-started) with Angular Material
+  
+### Step 2: 安装 NgMaterial2
+
+```shell
+  ng add @notadd/ng-material2
+```
+
+### Step 3: 导入组件模块
+
+```TypeScript
+  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material2';
+  
+  @NgModule({
+    ...
+    imports: [ NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule ],
+    ...
+  })
+  export class AppModule { }
+```
 
 ## 贡献说明
 
