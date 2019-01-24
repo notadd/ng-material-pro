@@ -1,4 +1,4 @@
-import { Component, forwardRef, OnDestroy, OnInit, Renderer2, EventEmitter, Input, Output, HostBinding } from '@angular/core';
+import { Component, forwardRef, OnDestroy, OnInit, OnChanges, SimpleChanges, Renderer2, EventEmitter, Input, Output, HostBinding } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { OptionsInterface } from '../options.interface';
@@ -15,7 +15,7 @@ let NEXT_ID = 0;
         multi: true
     }],
 })
-export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAccessor {
+export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, ControlValueAccessor {
 
     /* 组件 id */
     @HostBinding('attr.id')
@@ -62,7 +62,18 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAc
     }
 
     ngOnInit() {
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        if (changes.options) {
+            this.options = changes.options.currentValue;
+            this.init();
+        }
+    }
+
+    init(): void {
         this.clearValue();
+
         if (this.model && this.model.length) {
             const getLabel = (options: Array<OptionsInterface>, val: string) => {
                 const item: OptionsInterface = options.filter((item: OptionsInterface) => item.value === val)[0];
