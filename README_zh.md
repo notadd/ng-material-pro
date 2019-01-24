@@ -4,6 +4,28 @@ angular  material2 扩展组件
 
 **[English](README.md)**
 
+### Step 1: 安装配置 material
+
+  [Getting Started Guide](https://material.angular.cn/guide/getting-started) with Angular Material
+  
+### Step 2: 安装 NgMaterial2
+
+```shell
+  ng add @notadd/ng-material2
+```
+
+### Step 3: 导入组件模块
+
+```TypeScript
+  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material2';
+  
+  @NgModule({
+    ...
+    imports: [ NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule ],
+    ...
+  })
+  export class AppModule { }
+```
 
 ## 贡献说明
 
@@ -39,17 +61,16 @@ angular  material2 扩展组件
 
 **UI组件**
 
-- [ ] 提示框 (components/alerts) ✔
-- [ ] 轮播 （components/carousels）✔
+- [x] 提示框 (components/alerts) ✔
+- [x] 轮播 （components/carousels）✔
 - [ ] 页脚 （components/footer）✔
 
 按钮：
 
 - [ ] 物品群 （item-groups）
-- [ ] 多级联动 ✔
+- [x] 多级联动 ✔
 - [ ] 多窗口 （components/windows）    
 - [ ] 悬停 （components/hover）
-- [ ] 上传 【文件上传，图片上传，头像上传】✔
 - [ ] 视差 （components/parallax）
 - [ ] 评级 （components/ratings）
 - [ ] 时间线 （components/timelines）
