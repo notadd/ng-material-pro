@@ -7,5 +7,5 @@
         </button>
         <mat-icon matSuffix *ngIf="!showClearIcon()">arrow_drop_down</mat-icon>
     </mat-form-field>
-    <nm-cascade-menu></nm-cascade-menu>
+    <nm-cascade-menu *ngIf="!touchUi"></nm-cascade-menu>
 </span>
