@@ -107,8 +107,8 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAc
             takeUntil(this.ngUnsubscribe),
             map(match => match.matches)
         ).subscribe(matches => {
+            this.touchUi !== matches && !matches && this.bottomSheetRef && this.bottomSheetRef.dismiss();
             this.touchUi = matches;
-            this.changeOnSelect = this.touchUi ? true : this.changeOnSelect;
         });
     }
 

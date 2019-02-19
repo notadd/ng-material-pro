@@ -6,11 +6,11 @@
     <mat-tab-group [selectedIndex]="selected.value"
                    (selectedIndexChange)="selected.setValue($event)">
         <mat-tab *ngFor="let menuItem of root.steps; let step = index"
-                [label]="root.currentLabels[step]?.label || '请选择'">
+                [label]="labels[step] || '请选择'">
             <mat-list class="menu-list">
                 <mat-list-item *ngFor="let listItem of menuItem; let i = index" class="menu-item"
                     [class.active]="listItem.active" [class.disabled]="listItem.disabled"
-                    (click)="root.selectHandle($event, step, i); selected.setValue(root.steps.length -1)">
+                    (click)="root.selectHandle($event, step, i); select(listItem.label)">
                     <div matLine>{{listItem.label}}</div>
                 </mat-list-item>
             </mat-list>
