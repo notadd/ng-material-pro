@@ -38,7 +38,7 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAc
     set touchUi(value: boolean) {
         this._touchUi = coerceBooleanProperty(value);
     }
-    private _touchUi;
+    private _touchUi = false;
 
     // bottomSheet
     bottomSheetRef: MatBottomSheetRef;
@@ -108,7 +108,6 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAc
             map(match => match.matches)
         ).subscribe(matches => {
             this.touchUi !== matches && !matches && this.bottomSheetRef && this.bottomSheetRef.dismiss();
-            this.touchUi = matches;
         });
     }
 
@@ -139,19 +138,23 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, ControlValueAc
         if (!isSelfTrigger) {
             return;
         }
-        this.menuVisible = !this.menuVisible;
 
-        if (this.menuVisible) {
-            this.globalListenFunc = this.renderer.listen(
-                'document', 'click', () => {
-                    this.menuVisible = false;
-                }
-            );
+        if (this.touchUi) {
+            this.menuVisible = false;
+            this.openBottomSheet();
         } else {
-            this.globalListenFunc && this.globalListenFunc();
-        }
+            this.menuVisible = !this.menuVisible;
 
-        this.touchUi && this.openBottomSheet();
+            if (this.menuVisible) {
+                this.globalListenFunc = this.renderer.listen(
+                    'document', 'click', () => {
+                        this.menuVisible = false;
+                    }
+                );
+            } else {
+                this.globalListenFunc && this.globalListenFunc();
+            }
+        }
     }
 
     changeLabels(): void {
