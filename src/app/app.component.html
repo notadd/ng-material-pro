@@ -268,6 +268,18 @@
                         [model]="['guide', 'design-principles', 'feedback']"
                         [options]="options">
                     </nm-cascade-dropdownlist>
+                    <br>
+                    <nm-cascade-dropdownlist
+                        placeholder="touchUi为true的演示"
+                        [options]="options"
+                        [touchUi]="true">
+                    </nm-cascade-dropdownlist>
+                    <br>
+                    <nm-cascade-dropdownlist
+                        placeholder="touchUi为动态变量的演示"
+                        [options]="options"
+                        [touchUi]="isHandset$ | async">
+                    </nm-cascade-dropdownlist>
                 </div>
                 <h2 class="subtitle" id="cascade-dropdownlist-usage">
                     Usage
@@ -315,6 +327,11 @@
                                 <td><code>changeOnSelect</code></td>
                                 <td><code>false</code></td>
                                 <td>选择任意一级的选项立即得到反馈，类型 boolean 默认 `false`</td>
+                            </tr>
+                            <tr>
+                                <td><code>touchUi</code></td>
+                                <td><code>false</code></td>
+                                <td>是否为触摸模式，若为true则在选择时在页面底部打开选项框，类型 boolean 默认 `false`</td>
                             </tr>
                             <tr>
                                 <td><code>model</code></td>
