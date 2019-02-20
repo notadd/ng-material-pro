@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable, Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
     title = 'app';
 
     options: Array<any> = [{
@@ -66,8 +69,29 @@ export class AppComponent {
         }],
     }];
 
+    isHandset$: Observable<boolean>;
+    private ngUnsubscribe: Subject<any>;
+
+    constructor(
+        private breakpointObserver: BreakpointObserver
+    ) {
+        this.ngUnsubscribe = new Subject();
+    }
+
+    ngOnInit() {
+        this.isHandset$ = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+            takeUntil(this.ngUnsubscribe),
+            map(match => match.matches)
+        );
+    }
+
     changeHandle(event: { path: Array<string>, value: string }): void {
         console.log(event);
+    }
+
+    ngOnDestroy() {
+        this.ngUnsubscribe.next();
+        this.ngUnsubscribe.complete();
     }
 
 }

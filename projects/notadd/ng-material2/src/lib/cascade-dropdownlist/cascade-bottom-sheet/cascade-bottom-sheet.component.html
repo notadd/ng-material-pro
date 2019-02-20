@@ -1,0 +1,19 @@
+<div class="nm-cascade-bottom-sheet" (click)="clickHandle($event)">
+    <div class="sheet-header">
+        <p class="sheet-title">{{root.placeholder}}</p>
+        <mat-icon class="close-btn" (click)="root.bottomSheetRef.dismiss()">close</mat-icon>
+    </div>
+    <mat-tab-group [selectedIndex]="selected.value"
+                   (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab *ngFor="let menuItem of root.steps; let step = index"
+                [label]="labels[step] || '请选择'">
+            <mat-list class="menu-list">
+                <mat-list-item *ngFor="let listItem of menuItem; let i = index" class="menu-item"
+                    [class.active]="listItem.active" [class.disabled]="listItem.disabled"
+                    (click)="root.selectHandle($event, step, i); select(listItem.label)">
+                    <div matLine>{{listItem.label}}</div>
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+    </mat-tab-group>
+</div>

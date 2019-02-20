@@ -1,7 +1,13 @@
 import { Component, forwardRef, OnDestroy, OnInit, OnChanges, SimpleChanges, Renderer2, EventEmitter, Input, Output, HostBinding } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
 
 import { OptionsInterface } from '../options.interface';
+import { NmCascadeBottomSheetComponent } from '../cascade-bottom-sheet/cascade-bottom-sheet.component';
 
 let NEXT_ID = 0;
 
@@ -26,6 +32,17 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
 
     @Input() placeholder = '请选择';
 
+    // Whether the cascade dropdownlist UI is in touch mode.
+    @Input()
+    get touchUi(): boolean { return this._touchUi; }
+    set touchUi(value: boolean) {
+        this._touchUi = coerceBooleanProperty(value);
+    }
+    private _touchUi = false;
+
+    // bottomSheet
+    bottomSheetRef: MatBottomSheetRef;
+
     // data
     @Input() options: Array<OptionsInterface>;
     @Input() clearable = false;
@@ -36,6 +53,8 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
     @Input() model: Array<string>;
     @Output() modelChange: EventEmitter<any> = new EventEmitter<any>();
 
+    private ngUnsubscribe: Subject<any>;
+
     steps: Array<any> = [];
     menuVisible = false;
     inputHover = false;
@@ -45,7 +64,10 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
 
     constructor(
         private renderer: Renderer2,
+        private breakpointObserver: BreakpointObserver,
+        private bottomSheet: MatBottomSheet
     ) {
+        this.ngUnsubscribe = new Subject();
     }
 
     private controlChange: Function = () => { };
@@ -91,6 +113,13 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
             this.setInputValue();
             this.initSteps(0, this.options);
         }
+
+        this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+            takeUntil(this.ngUnsubscribe),
+            map(match => match.matches)
+        ).subscribe(matches => {
+            this.touchUi !== matches && !matches && this.bottomSheetRef && this.bottomSheetRef.dismiss();
+        });
     }
 
     writeValue(value: any): void {
@@ -120,16 +149,22 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
         if (!isSelfTrigger) {
             return;
         }
-        this.menuVisible = !this.menuVisible;
 
-        if (this.menuVisible) {
-            this.globalListenFunc = this.renderer.listen(
-                'document', 'click', () => {
-                    this.menuVisible = false;
-                }
-            );
+        if (this.touchUi) {
+            this.menuVisible = false;
+            this.openBottomSheet();
         } else {
-            this.globalListenFunc && this.globalListenFunc();
+            this.menuVisible = !this.menuVisible;
+
+            if (this.menuVisible) {
+                this.globalListenFunc = this.renderer.listen(
+                    'document', 'click', () => {
+                        this.menuVisible = false;
+                    }
+                );
+            } else {
+                this.globalListenFunc && this.globalListenFunc();
+            }
         }
     }
 
@@ -214,13 +249,23 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
         // last step
         this.changeLabels();
         this.menuVisible = false;
+        this.touchUi && this.bottomSheetRef.dismiss();
     }
 
     showClearIcon(): boolean {
         return !!(this.clearable && this.inputHover && this.currentLabels.length);
     }
 
+    openBottomSheet(): void {
+        this.bottomSheetRef = this.bottomSheet.open(NmCascadeBottomSheetComponent, {
+            data: this
+        });
+    }
+
     ngOnDestroy(): void {
         this.globalListenFunc && this.globalListenFunc();
+        // unsubscribe
+        this.ngUnsubscribe.next();
+        this.ngUnsubscribe.complete();
     }
 }
