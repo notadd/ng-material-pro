@@ -31,6 +31,9 @@
 ##### changeOnSelect：
 > 说明：选择任意一级的选项立即得到反馈  
 > 类型：boolean 默认 `false`
+##### touchUi：
+> 说明：是否为触摸模式  
+> 类型：boolean 默认 `false`
 ### @output属性
 modelChange：返回当前选中的value数组
 ### 实例方法
