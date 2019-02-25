@@ -34,11 +34,11 @@ We welcome material2 users to participate in the development of this plugin, and
 
 -Refer to the project's current naming rules for file naming rules.
 
-## function Development Check Roadmap first to make sure that the features you want to contribute are not being implemented.
+function Development Check Roadmap first to make sure that the features you want to contribute are not being implemented.
 
 Then submit a contribution request in**issue**indicating the features you want to contribute.
 
-## Find Bugs? If you find a bug in the source code, please submit a bug question in the**issue**of this warehouse first.
+Find Bugs? If you find a bug in the source code, please submit a bug question in the**issue**of this warehouse first.
 
 After you have submitted the bug question, we are happy to accept that you submit a**pr**to help us fix the bug.
 
