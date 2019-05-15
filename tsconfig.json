@@ -22,6 +22,9 @@
             ],
             "@notadd/ng-material2/*": [
                 "dist/notadd/ng-material2/*"
+            ],
+            "core-js/es7/reflect": [
+                "./node_modules/core-js/proposals/reflect-metadata"
             ]
         }
     }
