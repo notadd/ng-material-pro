@@ -123,7 +123,7 @@ export class NmTransferPickerSourceComponent implements OnInit, AfterViewInit, O
         return ofObservable(node.children);
     }
 
-    private hasChild = (_: number, _nodeData: TransferItemFlatNode) => _nodeData.expandable;
+    hasChild = (_: number, _nodeData: TransferItemFlatNode) => _nodeData.expandable;
 
     /**
      * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
