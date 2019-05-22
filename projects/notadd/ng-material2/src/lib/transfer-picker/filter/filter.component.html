@@ -1,0 +1,17 @@
+<button class="filter-trigger" mat-icon-button (click)="toggleFilter()" cdk-overlay-origin>
+    <mat-icon>filter_list</mat-icon>
+</button>
+<ng-template cdk-portal #filterTemplate="cdkPortal">
+    <div class="filter-panel" fxLayout="column nowrap" fxLayoutAlign="start start" fxLayoutGap="20px">
+        <mat-button-toggle-group name="condition" fxFlexAlign="end" (change)="onConditionChange($event.value)">
+            <mat-button-toggle color="primary" value="or" [checked]="filterData.condition === 'or'">或</mat-button-toggle>
+            <mat-button-toggle color="primary" value="and" [checked]="filterData.condition === 'and'">且</mat-button-toggle>
+        </mat-button-toggle-group>
+
+        <div class="chip-list" color="primary">
+            <div class="chip-wrapper" *ngFor="let item of filters" (click)="onFilterClick(item)">
+                <span class="chip" [ngClass]="{selected: item?.selected}">{{item.label}}</span>
+            </div>
+        </div>
+    </div>
+</ng-template>

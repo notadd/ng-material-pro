@@ -1,0 +1,18 @@
+<mat-card class="transfer-picker-target">
+    <mat-card-header>
+        <mat-card-title class="transfer-picker-target-title">已选择 {{selectedList?.length}} 项</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <cdk-virtual-scroll-viewport itemSize="40" class="transfer-picker-target-scroll-wrapper">
+            <mat-list dense>
+                <mat-list-item *ngFor="let item of selectedList" class="transfer-picker-target-item">
+                    <div mat-line class="label">{{item.label}}</div>
+                    <button mat-icon-button (click)="clearItem(item)">
+                        <mat-icon>cancel</mat-icon>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+            <div *ngIf="!selectedList?.length" class="transfer-picker-target-empty">暂无数据</div>
+        </cdk-virtual-scroll-viewport>
+    </mat-card-content>
+</mat-card>

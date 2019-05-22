@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule, MatListModule, MatButtonModule } from '@angular/material';
 
-import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '../../projects/notadd/ng-material2/src/public_api';
+import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule, NmTransferPickerModule } from '../../projects/notadd/ng-material2/src/public_api';
 
 import { AppComponent } from './app.component';
 
@@ -25,7 +25,8 @@ import { AppComponent } from './app.component';
 
         NmAlertModule,
         NmCarouselModule,
-        NmCascadeDropdownlistModule
+        NmCascadeDropdownlistModule,
+        NmTransferPickerModule
 
     ],
     providers: [],

@@ -1,0 +1,67 @@
+.filter-trigger {
+    margin-right: 5px;
+}
+.filter-panel {
+    min-width: 276px;
+    background-color: #FFF;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+    .mat-button-toggle-group {
+        font-size: 12px;
+        margin-right: 15px;
+
+        .mat-button-toggle-label-content {
+            line-height: 1.8;
+        }
+
+        .mat-button-toggle {
+            background-color: #FFF;
+            color: #3f51b5;
+        }
+
+        .mat-button-toggle-checked {
+            background-color: #3f51b5;
+            color: #FFF;
+        }
+    }
+
+    .chip-list {
+        width: 276px;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        box-sizing: border-box;
+
+        &:after {
+            content: '';
+            flex: 1 1 100%;
+            max-width: 31%;
+        }
+
+        .chip-wrapper {
+            flex: 1 1 100%;
+            box-sizing: border-box;
+            max-width: 31%;
+            margin-bottom: 20px;
+            text-align: center;
+
+            .chip {
+                display: inline-block;
+                min-width: 50%;
+                cursor: pointer;
+                padding: 5px 10px;
+                font-size: 12px;
+                background-color: #fafafa;
+                color: #b3b3b3;
+
+                &.selected {
+                    background-color: #3f51b5;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+

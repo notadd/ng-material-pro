@@ -3,6 +3,12 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import {
+    TransferFilterCondition,
+    TransferFilterItem,
+    TransferItemNode
+} from '../../projects/notadd/ng-material2/src/public_api';
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -67,6 +73,69 @@ export class AppComponent implements OnInit {
             label: 'Cascader 级联选择器',
         }],
     }];
+
+    /**
+     * The Json object for transfer list data.
+     */
+    treeData: Array<TransferItemNode> = [
+        {
+            label: '常规',
+            value: 'general',
+            children: [
+                {
+                    label: '相等',
+                    value: 'asise',
+                    num: 1
+                },
+                {
+                    label: '大于',
+                    value: 'sllew',
+                    num: 3
+                },
+                {
+                    label: '相等大于',
+                    value: 'asisew',
+                    num: 3,
+                    children: [
+                        {
+                            label: '相等大于的儿子',
+                            value: 'asis22',
+                        },
+                        {
+                            label: '相等大于的2儿子',
+                            value: 'as22is22',
+                        },
+                    ]
+                },
+                {
+                    label: '不相等不大于',
+                    value: 'asi2s',
+                    num: 1
+                }
+            ]
+        },
+        {
+            label: '德甲',
+            value: 'asisw',
+            children: [
+                {
+                    label: 'A款',
+                    value: 'asisww'
+                }
+            ]
+        }
+    ];
+
+    selectedValues: Array<string> = ['asise', 'asisww'];
+
+    filters: Array<TransferFilterItem> = [
+        {
+            label: '大于等于2',
+            value: 2,
+            condition: [TransferFilterCondition.MORE_THAN, TransferFilterCondition.EQUALS],
+            field: 'num'
+        }
+    ];
 
     isHandset: Observable<boolean>;
 

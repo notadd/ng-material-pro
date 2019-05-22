@@ -1,0 +1,12 @@
+<div class="nm-transfer-picker-container" fxLayout="row nowrap" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <nm-transfer-picker-source></nm-transfer-picker-source>
+    <div class="nm-transfer-picker-operation" fxLayout="column nowrap" fxLayoutGap="30px">
+        <button mat-raised-button color="primary" (click)="pick()">
+            选择<mat-icon class="mat-18">chevron_right</mat-icon>
+        </button>
+        <button mat-raised-button color="primary" (click)="reset()">
+            <mat-icon class="mat-18">chevron_left</mat-icon>重置
+        </button>
+    </div>
+    <nm-transfer-picker-target [selectedList]="selectedList" (clearItemChange)="onClearItemChange($event)"></nm-transfer-picker-target>
+</div>

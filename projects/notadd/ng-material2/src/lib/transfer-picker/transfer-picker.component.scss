@@ -1,0 +1,12 @@
+:host {
+    .nm-transfer-picker-container {
+        height: 460px;
+        overflow: hidden;
+        padding: 5px 0;
+    }
+
+    nm-transfer-picker-source,
+    nm-transfer-picker-target{
+        height: 100%;
+    }
+}

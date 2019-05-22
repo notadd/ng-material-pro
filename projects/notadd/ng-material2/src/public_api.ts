@@ -16,3 +16,8 @@ export * from './lib/carousel/slide.component';
 export * from './lib/cascade-dropdownlist/cascade-dropdownlist.module';
 export * from './lib/cascade-dropdownlist/cascade-list/cascade-list.component';
 export * from './lib/cascade-dropdownlist/cascade-menu/cascade-menu.component';
+
+/* Transfer Picker */
+export * from './lib/transfer-picker/transfer-picker.module';
+export * from './lib/transfer-picker/transfer-picker.component';
+export * from './lib/transfer-picker/interface';

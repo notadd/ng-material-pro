@@ -1,0 +1,39 @@
+<mat-card class="transfer-picker-source">
+    <mat-card-header fxLayout="row nowrap" fxLayoutAlign="space-between start">
+        <mat-card-title class="transfer-picker-source-title">{{options.title}}</mat-card-title>
+        <nm-filter *ngIf="options.filterable" [filters]="options.filters"></nm-filter>
+    </mat-card-header>
+    <mat-card-content class="transfer-picker-source-content">
+        <nm-search *ngIf="options.searchable" [searchPlaceholder]="options.searchPlaceholder"></nm-search>
+
+        <cdk-virtual-scroll-viewport itemSize="48" class="transfer-picker-source-scroll-wrapper">
+            <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+                    <button mat-icon-button disabled></button>
+                    <mat-checkbox class="checklist-leaf-node"
+                                  [checked]="checklistSelection.isSelected(node)"
+                                  [disabled]="node?.disabled"
+                                  (change)="transferLeafItemSelectionToggle(node);">
+                        {{node.label}}
+                    </mat-checkbox>
+                </mat-tree-node>
+
+                <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+                    <button mat-icon-button matTreeNodeToggle>
+                        <mat-icon class="mat-icon-rtl-mirror">
+                            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                        </mat-icon>
+                    </button>
+                    <mat-checkbox [checked]="descendantsAllSelected(node)"
+                                  [indeterminate]="descendantsPartiallySelected(node)"
+                                  [disabled]="node?.disabled"
+                                  (change)="transferItemSelectionToggle(node)">
+                        {{node.label}}
+                    </mat-checkbox>
+                </mat-tree-node>
+            </mat-tree>
+            <div *ngIf="!dataSource?.data.length" class="transfer-picker-source-empty">暂无数据</div>
+        </cdk-virtual-scroll-viewport>
+
+    </mat-card-content>
+</mat-card>

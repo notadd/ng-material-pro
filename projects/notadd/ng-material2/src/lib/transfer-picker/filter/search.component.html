@@ -1,0 +1,6 @@
+<mat-form-field>
+    <input matInput type="text" placeholder="{{searchPlaceholder}}" [formControl]="keyword">
+    <button mat-button *ngIf="keyword.value" matSuffix mat-icon-button (click)="reset()">
+        <mat-icon>close</mat-icon>
+    </button>
+</mat-form-field>
