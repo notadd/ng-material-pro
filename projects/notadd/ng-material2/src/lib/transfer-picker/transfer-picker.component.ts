@@ -34,7 +34,7 @@ export class NmTransferPickerComponent implements OnInit, AfterViewInit {
     @Output()
     selectChange: EventEmitter<Array<TransferItemNode>>;
 
-    @ViewChild(NmTransferPickerSourceComponent)
+    @ViewChild(NmTransferPickerSourceComponent, { static: true })
     source: NmTransferPickerSourceComponent;
 
     selectedList: Array<TransferItemNode>;

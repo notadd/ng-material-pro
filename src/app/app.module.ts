@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatIconModule, MatListModule, MatButtonModule } from '@angular/material';
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
 
 import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule, NmTransferPickerModule } from '../../projects/notadd/ng-material2/src/public_api';
 

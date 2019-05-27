@@ -2,7 +2,7 @@ import { Component, forwardRef, OnDestroy, OnInit, OnChanges, SimpleChanges, Ren
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MatBottomSheet, MatBottomSheetRef } from '@angular/material';
+import { MatBottomSheet, MatBottomSheetRef } from "@angular/material/bottom-sheet";
 import { Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 

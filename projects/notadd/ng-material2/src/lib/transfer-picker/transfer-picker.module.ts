@@ -5,7 +5,15 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { PortalModule } from '@angular/cdk/portal';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule, MatButtonModule, MatTreeModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatCardModule, MatButtonToggleModule, MatListModule } from '@angular/material';
+import { MatButtonModule } from "@angular/material/button";
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
+import { MatCardModule } from "@angular/material/card";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatListModule } from "@angular/material/list";
+import { MatTreeModule } from "@angular/material/tree";
 
 import { NmTransferPickerComponent } from './transfer-picker.component';
 import { NmTransferPickerSourceComponent } from './transfer-picker-source.component';

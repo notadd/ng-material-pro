@@ -12,8 +12,8 @@ import { NmTransferPickerService } from '../transfer-picker.service';
 })
 export class NmFilterComponent implements OnInit {
 
-    @ViewChild(CdkOverlayOrigin) overlayOrigin: CdkOverlayOrigin;
-    @ViewChild('filterTemplate') filterTemplate: TemplatePortalDirective;
+    @ViewChild(CdkOverlayOrigin, { static: true }) overlayOrigin: CdkOverlayOrigin;
+    @ViewChild('filterTemplate', { static: true }) filterTemplate: TemplatePortalDirective;
     overlayRef: OverlayRef;
 
     @Input()
