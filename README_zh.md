@@ -8,7 +8,7 @@ angular  material2 扩展组件
 
   [Getting Started Guide](https://material.angular.cn/guide/getting-started) with Angular Material
   
-### Step 2: 安装 NgMaterial2
+### Step 2: 安装 MaterialPro
 
 ```shell
   ng add @notadd/ng-material2
@@ -67,11 +67,8 @@ angular  material2 扩展组件
 
 按钮：
 
-- [ ] 物品群 （item-groups）
 - [x] 多级联动 ✔
-- [ ] 多窗口 （components/windows）    
-- [ ] 悬停 （components/hover）
-- [ ] 视差 （components/parallax）
 - [ ] 评级 （components/ratings）
 - [ ] 时间线 （components/timelines）
+- [x] 穿梭框
 - [ ] 可拖拽树视图 【滞后】
