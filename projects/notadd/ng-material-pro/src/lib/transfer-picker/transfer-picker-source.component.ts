@@ -142,20 +142,20 @@ export class NmTransferPickerSourceComponent implements OnInit, AfterViewInit, O
     }
 
     /** Whether all the descendants of the node are selected */
-    private descendantsAllSelected(node: TransferItemFlatNode): boolean {
+    descendantsAllSelected(node: TransferItemFlatNode): boolean {
         const descendants = this.treeControl.getDescendants(node);
         return descendants.every(child => this.checklistSelection.isSelected(child));
     }
 
     /** Whether part of the descendants are selected */
-    private descendantsPartiallySelected(node: TransferItemFlatNode): boolean {
+    descendantsPartiallySelected(node: TransferItemFlatNode): boolean {
         const descendants = this.treeControl.getDescendants(node);
         const result = descendants.some(child => this.checklistSelection.isSelected(child));
         return result && !this.descendantsAllSelected(node);
     }
 
     /** Toggle the transfer item selection. Select/deselect all the descendants node */
-    private transferItemSelectionToggle(node: TransferItemFlatNode): void {
+    transferItemSelectionToggle(node: TransferItemFlatNode): void {
         this.checklistSelection.toggle(node);
         let descendants = this.treeControl.getDescendants(node);
         descendants = descendants.filter(node => !node.disabled);
@@ -171,7 +171,7 @@ export class NmTransferPickerSourceComponent implements OnInit, AfterViewInit, O
     }
 
     /** Toggle a leaf transfer item selection. Check all the parents to see if they changed */
-    private transferLeafItemSelectionToggle(node: TransferItemFlatNode): void {
+    transferLeafItemSelectionToggle(node: TransferItemFlatNode): void {
         this.checklistSelection.toggle(node);
         this.checkAllParentsSelection(node);
     }
