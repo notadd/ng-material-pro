@@ -1,4 +1,4 @@
-# NgMaterial2
+# NgMaterialPro
 
 angular  material2 扩展组件
 
@@ -11,13 +11,13 @@ angular  material2 扩展组件
 ### Step 2: 安装 MaterialPro
 
 ```shell
-  ng add @notadd/ng-material2
+  ng add @notadd/ng-material-pro
 ```
 
 ### Step 3: 导入组件模块
 
 ```TypeScript
-  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material2';
+  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material-pro';
   
   @NgModule({
     ...

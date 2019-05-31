@@ -1,7 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../../dist/notadd/ng-material2",
-  "deleteDestPath": false,
+  "dest": "../../../dist/notadd/ng-material-pro",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

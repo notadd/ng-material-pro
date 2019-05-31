@@ -1,5 +1,5 @@
 {
-  "name": "ng-material2",
+  "name": "ng-material-pro",
   "version": "0.0.8",
   "scripts": {
     "ng": "ng",
@@ -8,10 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:lib": "ng build @notadd/ng-material2",
-    "build:lib:prod": "ng build --prod @notadd/ng-material2",
-    "publish:lib": "cd dist/notadd/ng-material2 && npm publish --access public",
-    "deploy": "ng build --prod --base-href /ng-material2/ && angular-cli-ghpages --dir ./dist/ng-material2/",
+    "build:lib": "ng build @notadd/ng-material-pro",
+    "build:lib:prod": "ng build --prod @notadd/ng-material-pro",
+    "publish:lib": "cd dist/notadd/ng-material-pro && npm publish --access public",
+    "deploy": "ng build --prod --base-href /ng-material-pro/ && angular-cli-ghpages --dir ./dist/ng-material-pro/",
     "schematics:build": "tsc -p ./projects/schematics/tsconfig.json",
     "schematics:copy": "npm run schematics:build && webpack",
     "build-package": "npm run build:lib:prod && npm run schematics:copy"

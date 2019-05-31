@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ng-material2
+ * Public API Surface of ng-material-pro
  */
 
 /* Alert */

@@ -7,7 +7,7 @@ import {
     TransferFilterCondition,
     TransferFilterItem,
     TransferItemNode
-} from '../../projects/notadd/ng-material2/src/public_api';
+} from '../../projects/notadd/ng-material-pro/src/public_api';
 
 @Component({
     selector: 'app-root',

@@ -1,4 +1,4 @@
-# NgMaterial2
+# NgMaterialPro
 
 Angular material2 Extension Components ..
 
@@ -9,14 +9,14 @@ It will be like : https://vuetifyjs.com/zh-Hans/components/alerts
 
 ### Step 1: Install and configure Angular Material
   [Getting Started Guide](https://material.angular.io/guide/getting-started) with Angular Material
-### Step 2: Install Notadd NgMaterial2
+### Step 2: Install Notadd NgMaterialPro
 ```shell
-  ng add @notadd/ng-material2
+  ng add @notadd/ng-material-pro
 ```
 
 ### Step 3: Import the component modules
 ```TypeScript
-  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material2';
+  import { NmAlertModule, NmCarouselModule, NmCascadeDropdownlistModule } from '@notadd/ng-material-pro';
   
   @NgModule({
     ...

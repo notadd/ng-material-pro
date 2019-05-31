@@ -18,11 +18,11 @@
             "dom"
         ],
         "paths": {
-            "@notadd/ng-material2": [
-                "dist/notadd/ng-material2"
+            "@notadd/ng-material-pro": [
+                "dist/notadd/ng-material-pro"
             ],
-            "@notadd/ng-material2/*": [
-                "dist/notadd/ng-material2/*"
+            "@notadd/ng-material-pro/*": [
+                "dist/notadd/ng-material-pro/*"
             ],
             "core-js/es7/reflect": [
                 "./node_modules/core-js/proposals/reflect-metadata"

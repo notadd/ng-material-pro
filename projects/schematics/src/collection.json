@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "ng-add": {
-      "description": "Add Notadd NgMaterial2 to the application.",
+      "description": "Add Notadd NgMaterialPro to the application.",
       "factory": "./ng-add/index#ngAdd"
     }
   }
