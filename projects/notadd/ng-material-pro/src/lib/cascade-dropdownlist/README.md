@@ -34,6 +34,9 @@
 ##### touchUi：
 > 说明：是否为触摸模式  
 > 类型：boolean 默认 `false`
+##### appearance:
+> 说明：表单字段外观的变体形式  
+> 类型：`'legacy' | 'standard' | 'fill' | 'outline'` 默认 `'legacy'`
 ### @output属性
 modelChange：返回当前选中的value数组
 ### 实例方法

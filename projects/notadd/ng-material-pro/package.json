@@ -1,6 +1,6 @@
 {
     "name": "@notadd/ng-material-pro",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "peerDependencies": {
         "@angular/common": "^7.0.0-rc.0 || ^7.0.0",
         "@angular/core": "^7.0.0-rc.0 || ^7.0.0",

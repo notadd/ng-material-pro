@@ -32,6 +32,8 @@ export class NmCascadeListComponent implements OnInit, OnDestroy, OnChanges, Con
 
     @Input() placeholder = '请选择';
 
+    @Input() appearance: 'legacy' | 'standard' | 'fill' | 'outline' = 'legacy';
+
     // Whether the cascade dropdownlist UI is in touch mode.
     @Input()
     get touchUi(): boolean { return this._touchUi; }

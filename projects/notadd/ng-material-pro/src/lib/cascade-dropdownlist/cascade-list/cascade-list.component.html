@@ -1,6 +1,6 @@
 <span class="nm-cascade-list" [ngClass]="{'opened': menuVisible, 'disabled': disabled}" (click)="clickHandle($event)"
     (mouseenter)="inputHover = true" (mouseleave)="inputHover = false">
-    <mat-form-field>
+    <mat-form-field [appearance]="appearance">
         <input [value]="inputValue || ''" matInput readonly [placeholder]="currentLabels.length ? '' : placeholder">
         <button mat-button *ngIf="showClearIcon()" matSuffix mat-icon-button aria-label="Clear" (click)="clearValue($event)">
             <mat-icon>close</mat-icon>
