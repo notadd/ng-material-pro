@@ -50,11 +50,7 @@ angular  material2 扩展组件
 
 ### Roadmap
 
-- [ ] Icons+ ✔
 
-**布局**
-
-- [ ] 预设布局 
 
 **动画**
 
@@ -63,7 +59,7 @@ angular  material2 扩展组件
 
 - [x] 提示框 (components/alerts) ✔
 - [x] 轮播 （components/carousels）✔
-- [ ] 页脚 （components/footer）✔
+
 
 按钮：
 
@@ -71,4 +67,4 @@ angular  material2 扩展组件
 - [ ] 评级 （components/ratings）
 - [ ] 时间线 （components/timelines）
 - [x] 穿梭框
-- [ ] 可拖拽树视图 【滞后】
+- [x] 可拖拽树视图 
